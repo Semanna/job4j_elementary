@@ -73,8 +73,8 @@ class PointTest {
 
     @Test
     void when308To004Then5() {
-        Point first = new Point (3, 0, 8);
-        Point second = new Point (0, 0, 4);
+        Point first = new Point(3, 0, 8);
+        Point second = new Point(0, 0, 4);
         double expected = 5;
         double result = first.distance3d(second);
 
@@ -83,8 +83,8 @@ class PointTest {
 
     @Test
     void when305To001Then5() {
-        Point first = new Point (3, 0, 5);
-        Point second = new Point (0, 0, 1);
+        Point first = new Point(3, 0, 5);
+        Point second = new Point(0, 0, 1);
         double expected = 5;
         double result = first.distance3d(second);
 
