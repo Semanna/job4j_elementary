@@ -9,17 +9,18 @@ public class Matches {
         boolean turn = true;
         int count = 11;
 
-        while (count > 1) {
+        while (count > 0) {
+            int maxCount = Math.min(3, count);
             String player = turn ? "Первый игрок," : "Второй игрок,";
-            System.out.println(player + " введите число от 1 до 3:");
+            System.out.println(player + " введите число от 1 до " + maxCount + ":");
             int matches = Integer.parseInt(input.nextLine());
 
-            if (matches <= 3 && matches >= 1) {
+            if (matches <= 3 && matches >= 1 && matches <= count) {
                 count = count - matches;
                 System.out.println("На столе осталось спичек: " + count);
                 turn = !turn;
             } else {
-                System.out.println("Допустим только ввод чисел от 1 до 3");
+                System.out.println("Допустим только ввод чисел от 1 до " + maxCount);
             }
         }
         if (!turn) {
