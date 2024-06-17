@@ -15,7 +15,7 @@ public class Matches {
             System.out.println(player + " введите число от 1 до " + maxCount + ":");
             int matches = Integer.parseInt(input.nextLine());
 
-            if (matches <= 3 && matches >= 1 && matches <= count) {
+            if (matches <= maxCount && matches >= 1) {
                 count = count - matches;
                 System.out.println("На столе осталось спичек: " + count);
                 turn = !turn;
