@@ -13,4 +13,12 @@ class FactorialTest {
                 () -> Factorial.calc(-1));
         assertThat(exception.getMessage()).isEqualTo("Number could not be less than 0");
     }
+
+    @Test
+    public void whenCountFactorial() {
+        int number = 4;
+        int expected = 24;
+        int result = Factorial.calc(number);
+        assertThat(result).isEqualTo(expected);
+    }
 }
