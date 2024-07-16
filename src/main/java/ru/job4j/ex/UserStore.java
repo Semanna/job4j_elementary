@@ -12,10 +12,10 @@ public class UserStore {
     }
 
     public static boolean validate(User user) throws UserInvalidException {
-        if (user.isValid() && user.getUsername().length() >= 3) {
-            return true;
+        if (!user.isValid() || user.getUsername().length() <= 3) {
+            throw new UserInvalidException("This user isn't valid");
         }
-        throw new UserInvalidException("This user isn't valid");
+        return true;
     }
 
     public static void main(String[] args) throws UserNotFoundException {
